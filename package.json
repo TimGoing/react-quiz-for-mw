@@ -1,7 +1,7 @@
 {
-  "name": "react-quiz-component",
-  "version": "0.5.1",
-  "description": "React Quiz Component",
+  "name": "react-quiz-component-mw",
+  "version": "0.0.1",
+  "description": "React Quiz Component for mw",
   "main": "lib/Quiz.js",
   "scripts": {
     "dev": "concurrently \"npm run lib:watch\" \"npm run docs\"",
