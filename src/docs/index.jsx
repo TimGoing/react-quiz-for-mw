@@ -12,14 +12,14 @@ const App = function () {
   return (
     <Quiz
       quiz={quiz}
-      shuffle
+      // shuffle
       // showInstantFeedback
       // continueTillCorrect
       onComplete={setQuizResult}
       onQuestionSubmit={(obj) => console.log('user question results:', obj)}
       disableSynopsis
       // revealAnswerOnSubmit
-      // allowNavigation
+      allowNavigation
     />
   );
 };

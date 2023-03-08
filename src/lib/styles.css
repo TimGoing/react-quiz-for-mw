@@ -1,6 +1,11 @@
 .react-quiz-container {
   margin: 20px;
   width: 500px;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: white;
+
+  border: 1px solid black;
 }
 
 .react-quiz-container .startQuizWrapper {
@@ -28,7 +33,7 @@
 .react-quiz-container .questionWrapper .btn {
   margin-top: 10px;
   margin-bottom: 10px;
-  border-radius: 4px;
+  border-radius: 50px;
   border: 1px solid #e8e8e8;;
   font-size: 15px;
   display: block;
@@ -67,8 +72,8 @@
 }
 
 .react-quiz-container .selected {
-  background: #007bff;
-  color: white;
+  background: #ffcc01;
+  color: black;
 }
 
 .react-quiz-container .startQuizWrapper .startQuizBtn {
