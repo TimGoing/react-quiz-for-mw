@@ -98,6 +98,8 @@ const Core = function ({
   const [question, setQuestion] = useState(questions[currentQuestionIndex]);
   const [questionSummary, setQuestionSummary] = useState(undefined);
 
+  const [answerIsSelected, setAnswerIsSelected] = useState(new Array(questions.length).fill(false))
+
   useEffect(() => {
     setShowDefaultResult(showDefaultResult !== undefined ? showDefaultResult : true);
   }, [showDefaultResult]);
@@ -155,23 +157,31 @@ const Core = function ({
     console.log(userInput) // 111111111111111111111111111111111111111111111111111111111111111
   }, [userInput])
 
-  const nextQuestion = (currentQuestionIdx) => {
+  const nextQuestion = (currentQuestionIdx, prev=false) => {
+    
     setIncorrectAnswer(false);
     setCorrectAnswer(false);
     setShowNextQuestionButton(false);
     setButtons({});
 
+    if(!prev) {
+      if(!answerIsSelected[currentQuestionIndex]) return
+    } 
+
     if (currentQuestionIdx + 1 === questions.length) {
       if (userInput.length !== questions.length) {
-        alert('Quiz is incomplete');
-      } else if (allowNavigation) {
-        const submitQuiz = confirm('You have finished all the questions. Submit Quiz now?');
-        if (submitQuiz) {
-          setEndQuiz(true);
-        }
-      } else {
-        setEndQuiz(true);
-      }
+        // alert('Quiz is incomplete');
+        return
+      } 
+      // else if (allowNavigation) {
+      //   const submitQuiz = confirm('You have finished all the questions. Submit Quiz now?');
+      //   if (submitQuiz) {
+      //     setEndQuiz(true);
+      //   }
+      // } else {
+      //   setEndQuiz(true);
+      // }
+      setEndQuiz(true);
     } else {
       setCurrentQuestionIndex(currentQuestionIdx + 1);
     }
@@ -315,7 +325,8 @@ const Core = function ({
               disabled={buttons[index].disabled || false}
               className={`${buttons[index].className} answerBtn btn`}
               // onClick={() => (revealAnswerOnSubmit ? onSelectAnswer(index) : onClickAnswer(index))}
-              onClick={() => (revealAnswerOnSubmit ? onSelectAnswer(index) : onSelectAnswer(index))}
+              // onClick={() => (revealAnswerOnSubmit ? onSelectAnswer(index) : onSelectAnswer(index))}
+              onClick={revealAnswerOnSubmit ? () => {onSelectAnswer(index);} : () => {onSelectAnswer(index); answerIsSelected[currentQuestionIndex] = true}}
             >
               {questionType === 'text' && <span>{answer}</span>}
               {questionType === 'photo' && <img src={answer} alt="image" />}
@@ -325,7 +336,8 @@ const Core = function ({
             <button
               type="button"
               // onClick={() => (revealAnswerOnSubmit ? onSelectAnswer(index) : onClickAnswer(index))}
-              onClick={() => (revealAnswerOnSubmit ? onSelectAnswer(index) : onSelectAnswer(index))}
+              // onClick={() => (revealAnswerOnSubmit ? onSelectAnswer(index) : onSelectAnswer(index))}
+              onClick={revealAnswerOnSubmit ? () => {onSelectAnswer(index);} : () => {onSelectAnswer(index); answerIsSelected[currentQuestionIndex] = true }}
               className={`answerBtn btn ${(allowNavigation && checkSelectedAnswer(index + 1)) ? 'selected' : null}`}
             >
               {questionType === 'text' && answer}
@@ -437,15 +449,15 @@ const Core = function ({
           <div className="questionBtnContainer">
             {(allowNavigation && currentQuestionIndex > 0) && (
               <button
-                onClick={() => nextQuestion(currentQuestionIndex - 2)}
+                onClick={() => nextQuestion(currentQuestionIndex - 2, true)}
                 className="prevQuestionBtn btn"
                 type="button"
               >
                 {appLocale.prevQuestionBtn}
               </button>
             )}
-            <button onClick={() => nextQuestion(currentQuestionIndex)} className="nextQuestionBtn btn" type="button">
-              {appLocale.nextQuestionBtn}
+            <button onClick={() => nextQuestion(currentQuestionIndex)} className={ answerIsSelected[currentQuestionIndex] ? "nextQuestionBtn btn" : "nextQuestionBtn btn disable_btn"} type="button">
+              {answerIsSelected[questions.length - 1] ? "遞交" : appLocale.nextQuestionBtn}
             </button>
           </div>
           )}

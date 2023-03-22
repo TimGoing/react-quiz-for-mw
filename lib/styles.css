@@ -30,15 +30,31 @@
   cursor: pointer;
 }
 
-.react-quiz-container .questionWrapper .btn {
+.react-quiz-container .questionWrapper div:first-child {
+  color: #186EB6;
+}
+
+.react-quiz-container .questionWrapper h3 {
+  color: black;
+  font-size: 24px;
+  margin-bottom: 20px;
   margin-top: 10px;
-  margin-bottom: 10px;
+}
+
+.react-quiz-container .questionWrapper .btn {
+  margin: 20px 0;
   border-radius: 50px;
-  border: 1px solid #e8e8e8;;
+  border: 1px solid #186EB6;
+  background-color: white;
   font-size: 15px;
   display: block;
   white-space: normal;
-  text-align: unset;
+  text-align: center;
+  color: #186EB6;
+}
+
+.react-quiz-container .questionWrapper .btn:last-child {
+  margin-top: 28px;
 }
 
 .react-quiz-container .questionWrapper .btn.correct {
@@ -46,9 +62,13 @@
   color: white;
 }
 
+.react-quiz-container .questionWrapper .answerBtn:hover {
+  transform: scale(1.05);
+}
+
 .react-quiz-container .questionModal .alert {
   padding: 20px;
-  margin-bottom: 21px;
+  margin-bottom: 22px;
   border: 1px solid transparent;
   border-radius: 2px;
   color: #fff;
@@ -69,11 +89,13 @@
 
 .react-quiz-container .answerBtn {
   width: 100%;
+  transition: all .4s;
 }
 
-.react-quiz-container .selected {
-  background: #ffcc01;
-  color: black;
+.react-quiz-container .questionWrapper .selected {
+  border: none;
+  background: #186EB6;
+  color: white;
 }
 
 .react-quiz-container .startQuizWrapper .startQuizBtn {
@@ -171,6 +193,32 @@
 }
 
 .react-quiz-container .questionBtnContainer{
-  display:flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas: "prev . . . . next";
+}
+
+.react-quiz-container .questionBtnContainer button.btn {
+  margin-bottom: 0;
+} 
+
+
+.react-quiz-container .questionBtnContainer .prevQuestionBtn {
+  grid-area: prev;
+  border: none;
+  text-decoration: underline;
+}
+
+.react-quiz-container .questionBtnContainer .nextQuestionBtn {
+  grid-area: next;
+  color: black;
+  background-color: #FFCC01;
+  border: none;
+}
+
+.react-quiz-container .questionBtnContainer .disable_btn {
+  border: none !important;
+  background-color: lightgray !important;
+  color: darkgrey !important;
+  cursor: not-allowed !important;
 }
