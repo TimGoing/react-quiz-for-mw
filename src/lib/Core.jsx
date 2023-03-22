@@ -154,7 +154,7 @@ const Core = function ({
   }, [endQuiz, questionSummary]);
 
   useEffect(() => {
-    console.log(userInput) // 111111111111111111111111111111111111111111111111111111111111111
+    // console.log(userInput) // 111111111111111111111111111111111111111111111111111111111111111
   }, [userInput])
 
   const nextQuestion = (currentQuestionIdx, prev=false) => {
@@ -198,8 +198,8 @@ const Core = function ({
     let answerBtnCorrectClassName;
     let answerBtnIncorrectClassName;
 
-    return <div>11{
-        console.log(userInput.toString(), allAnswers.filter(i => i.toString() === userInput.toString())) //1111111111111111111111111111111111111111111111111111
+    return <div>{
+        // console.log(userInput.toString(), allAnswers.filter(i => i.toString() === userInput.toString())) //1111111111111111111111111111111111111111111111111111
       }</div>
 
     // console.log(correctAnswer, correct)
@@ -457,7 +457,7 @@ const Core = function ({
               </button>
             )}
             <button onClick={() => nextQuestion(currentQuestionIndex)} className={ answerIsSelected[currentQuestionIndex] ? "nextQuestionBtn btn" : "nextQuestionBtn btn disable_btn"} type="button">
-              {answerIsSelected[questions.length - 1] ? "遞交" : appLocale.nextQuestionBtn}
+              {(currentQuestionIndex === questions.length - 1) ? "遞交" : appLocale.nextQuestionBtn}
             </button>
           </div>
           )}
