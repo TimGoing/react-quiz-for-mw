@@ -9,12 +9,12 @@ import Explanation from './core-components/Explanation';
 const allAnswers = [
   [1, 1, 1, 1], [1, 1, 1, 2], [1, 1, 1, 3], [1, 1, 2, 1],
   [1, 1, 2, 2], [1, 1, 2, 3], [1, 1, 3, 1], [1, 1, 3, 2],
-  [1, 1, 3, 3], [1, 2, 1, 1], [1, 2, 1, 2], [1, 2, 1, 3], 
-  [1, 2, 2, 1], [1, 2, 2, 2], [1, 2, 2, 3], [1, 2, 3, 1], 
-  [1, 2, 3, 2], [1, 2, 3, 3], [2, 1, 1, 1], [2, 1, 1, 2], 
-  [2, 1, 1, 3], [2, 1, 2, 1], [2, 1, 2, 2], [2, 1, 2, 3], 
-  [2, 1, 3, 1], [2, 1, 3, 2], [2, 1, 3, 3], [2, 2, 1, 1], 
-  [2, 2, 1, 2], [2, 2, 1, 3], [2, 2, 2, 1], [2, 2, 2, 2], 
+  [1, 1, 3, 3], [1, 2, 1, 1], [1, 2, 1, 2], [1, 2, 1, 3],
+  [1, 2, 2, 1], [1, 2, 2, 2], [1, 2, 2, 3], [1, 2, 3, 1],
+  [1, 2, 3, 2], [1, 2, 3, 3], [2, 1, 1, 1], [2, 1, 1, 2],
+  [2, 1, 1, 3], [2, 1, 2, 1], [2, 1, 2, 2], [2, 1, 2, 3],
+  [2, 1, 3, 1], [2, 1, 3, 2], [2, 1, 3, 3], [2, 2, 1, 1],
+  [2, 2, 1, 2], [2, 2, 1, 3], [2, 2, 2, 1], [2, 2, 2, 2],
   [2, 2, 2, 3], [2, 2, 3, 1], [2, 2, 3, 2], [2, 2, 3, 3]
 ]
 
@@ -33,8 +33,8 @@ const textForEachCorrectAnswer = [
   {
     id: 2,
     answer: [
-      [1, 1, 3, 3], [1, 2, 1, 1], [1, 2, 1, 2], [1, 2, 1, 3], 
-      [1, 2, 2, 1], [1, 2, 2, 2], [1, 2, 2, 3], [1, 2, 3, 1], 
+      [1, 1, 3, 3], [1, 2, 1, 1], [1, 2, 1, 2], [1, 2, 1, 3],
+      [1, 2, 2, 1], [1, 2, 2, 2], [1, 2, 2, 3], [1, 2, 3, 1],
     ],
     service1: "光面／啞面 PPF",
     content1: "相信您也明白路面碎石的破壞力，即使擁有室內車位也不能避免路上的意外，平衡過光澤度和保護性後，我們建議您為愛車進行PPF的護理，光面PPF擁有更好的光澤度，啞面PPF讓車輛更具氣質；或者您也有考慮過為愛車鍍膜，但鍍膜的車輛未能抵抗碎石，雖然您會有定期為愛車進行專業清潔，但路面上的風險磨損會破壞您所花的心機護理時間，所以Mr. Wrapper建議您使用PPF",
@@ -44,8 +44,8 @@ const textForEachCorrectAnswer = [
   {
     id: 3,
     answer: [
-      [1, 2, 3, 2], [1, 2, 3, 3], [2, 1, 1, 1], [2, 1, 1, 2], 
-      [2, 1, 1, 3], [2, 1, 2, 1], [2, 1, 2, 2], [2, 1, 2, 3], 
+      [1, 2, 3, 2], [1, 2, 3, 3], [2, 1, 1, 1], [2, 1, 1, 2],
+      [2, 1, 1, 3], [2, 1, 2, 1], [2, 1, 2, 2], [2, 1, 2, 3],
     ],
     service1: "鍍膜",
     content1: "追求光澤度的您，我們建議您使用鍍膜，鍍膜後的車身比較容易清潔，但要小心的是不專業的洗車有機會把積存的沙石破壞了表面塗層形成花痕，我們建議您加強清潔的次數，同時採用專業的泡沫洗車，Mr. Wrapper的客戶可以購買客戶尊享洗車套票，由香港唐氏綜合症協會的殘疾人士經培訓後主理，讓您的愛車光潔如新時亦可以為社會出一分力。",
@@ -55,8 +55,8 @@ const textForEachCorrectAnswer = [
   {
     id: 4,
     answer: [
-      [2, 1, 3, 1], [2, 1, 3, 2], [2, 1, 3, 3], [2, 2, 1, 1], 
-      [2, 2, 1, 2], [2, 2, 1, 3], [2, 2, 2, 1], [2, 2, 2, 2], 
+      [2, 1, 3, 1], [2, 1, 3, 2], [2, 1, 3, 3], [2, 2, 1, 1],
+      [2, 2, 1, 2], [2, 2, 1, 3], [2, 2, 2, 1], [2, 2, 2, 2],
     ],
     service1: "鍍膜",
     content1: "追求光澤度的您，我們建議您使用鍍膜，Mr. Wrapper 使用的是國際權威鍍膜品牌 Gyeon，通過鍍膜施工後的車身比較容易清潔，但要小心的是不專業的洗車有機會把積存的沙石破壞了表面塗層形成花痕，我們建議您採用專業的泡沫洗車 ;  你亦可以撰擇加入  Mr. Wrapper 的會籍計劃，由經培訓的社企學員定期為你提供售後保固服務，讓您的愛車保持光潔如新的同時亦可以為社會出一分力。",
@@ -65,7 +65,7 @@ const textForEachCorrectAnswer = [
   },
   {
     id: 5,
-    answer: [  [2, 2, 2, 3], [2, 2, 3, 1], [2, 2, 3, 2], [2, 2, 3, 3]],
+    answer: [[2, 2, 2, 3], [2, 2, 3, 1], [2, 2, 3, 2], [2, 2, 3, 3]],
     service1: "光面／啞面 PPF",
     content1: "因為你沒有固定的室內停車位，PPF貼膜有更好的防護性，可以防止鳥糞、碎石、雨水等侵蝕，幸好您沒有在行駛中被碎石撞花的經驗，但追求保護性的您應該是謹慎的人，同時您為愛車清潔的習慣比較少，使用PPF後我們建議您每月進行一至兩次的清潔，光面PPF可以突顯車漆的亮度，讓您的愛車更光潔如新。",
     service2: "局部貼膜",
@@ -157,22 +157,26 @@ const Core = function ({
     // console.log(userInput) // 111111111111111111111111111111111111111111111111111111111111111
   }, [userInput])
 
-  const nextQuestion = (currentQuestionIdx, prev=false) => {
-    
+  useEffect(() => { }, [answerIsSelected])
+
+
+  const nextQuestion = (currentQuestionIdx, prev = false, finish = false) => {
+
     setIncorrectAnswer(false);
     setCorrectAnswer(false);
     setShowNextQuestionButton(false);
     setButtons({});
 
-    if(!prev) {
-      if(!answerIsSelected[currentQuestionIndex]) return
-    } 
+    if (!prev) {
+      if (!answerIsSelected[currentQuestionIdx]) return
+    }
 
     if (currentQuestionIdx + 1 === questions.length) {
       if (userInput.length !== questions.length) {
         // alert('Quiz is incomplete');
         return
-      } 
+      }
+      if (!finish) return
       // else if (allowNavigation) {
       //   const submitQuiz = confirm('You have finished all the questions. Submit Quiz now?');
       //   if (submitQuiz) {
@@ -199,8 +203,8 @@ const Core = function ({
     let answerBtnIncorrectClassName;
 
     return <div>{
-        // console.log(userInput.toString(), allAnswers.filter(i => i.toString() === userInput.toString())) //1111111111111111111111111111111111111111111111111111
-      }</div>
+      // console.log(userInput.toString(), allAnswers.filter(i => i.toString() === userInput.toString())) //1111111111111111111111111111111111111111111111111111
+    }</div>
 
     // console.log(correctAnswer, correct)
 
@@ -291,17 +295,20 @@ const Core = function ({
       setUserAttempt,
     });
 
-    const onSelectAnswer = (index) => selectAnswer(index + 1, correctAnswer, answerSelectionType, {
-      userInput,
-      currentQuestionIndex,
-      setButtons,
-      setShowNextQuestionButton,
-      incorrect,
-      correct,
-      setCorrect,
-      setIncorrect,
-      setUserInput,
-    });
+    const onSelectAnswer = (index) => {
+      selectAnswer(index + 1, correctAnswer, answerSelectionType, {
+        userInput,
+        currentQuestionIndex,
+        setButtons,
+        setShowNextQuestionButton,
+        incorrect,
+        correct,
+        setCorrect,
+        setIncorrect,
+        setUserInput,
+      });
+
+    }
 
     const checkSelectedAnswer = (index) => {
       if (userInput[questionIndex - 1] === undefined) {
@@ -326,7 +333,7 @@ const Core = function ({
               className={`${buttons[index].className} answerBtn btn`}
               // onClick={() => (revealAnswerOnSubmit ? onSelectAnswer(index) : onClickAnswer(index))}
               // onClick={() => (revealAnswerOnSubmit ? onSelectAnswer(index) : onSelectAnswer(index))}
-              onClick={revealAnswerOnSubmit ? () => {onSelectAnswer(index);} : () => {onSelectAnswer(index); answerIsSelected[currentQuestionIndex] = true}}
+              onClick={revealAnswerOnSubmit ? () => { onSelectAnswer(index); nextQuestion(currentQuestionIndex) } : () => { onSelectAnswer(index); answerIsSelected[currentQuestionIndex] = true; nextQuestion(currentQuestionIndex); }}
             >
               {questionType === 'text' && <span>{answer}</span>}
               {questionType === 'photo' && <img src={answer} alt="image" />}
@@ -337,7 +344,7 @@ const Core = function ({
               type="button"
               // onClick={() => (revealAnswerOnSubmit ? onSelectAnswer(index) : onClickAnswer(index))}
               // onClick={() => (revealAnswerOnSubmit ? onSelectAnswer(index) : onSelectAnswer(index))}
-              onClick={revealAnswerOnSubmit ? () => {onSelectAnswer(index);} : () => {onSelectAnswer(index); answerIsSelected[currentQuestionIndex] = true }}
+              onClick={revealAnswerOnSubmit ? () => { onSelectAnswer(index); nextQuestion(currentQuestionIndex) } : () => { onSelectAnswer(index); answerIsSelected[currentQuestionIndex] = true; nextQuestion(currentQuestionIndex); }}
               className={`answerBtn btn ${(allowNavigation && checkSelectedAnswer(index + 1)) ? 'selected' : null}`}
             >
               {questionType === 'text' && answer}
@@ -356,23 +363,23 @@ const Core = function ({
       pickNumberOfSelection,
     } = appLocale;
 
-     
-      
+
+
     return isRenderTags ? (
-              <div className="tag-container">
-                {answerSelectionType === 'single'
-                  && <span className="single selection-tag">{singleSelectionTagText}</span>}
-                {answerSelectionType === 'multiple'
-                  && <span className="multiple selection-tag">{multipleSelectionTagText}</span>}
-                <span className="number-of-selection">
-                  {pickNumberOfSelection.replace('<numberOfSelection>', numberOfSelection)}
-                </span>
-                {segment && <span className="selection-tag segment">{segment}</span>}
-              </div>
-            ) : false
-      
-      
-    
+      <div className="tag-container">
+        {answerSelectionType === 'single'
+          && <span className="single selection-tag">{singleSelectionTagText}</span>}
+        {answerSelectionType === 'multiple'
+          && <span className="multiple selection-tag">{multipleSelectionTagText}</span>}
+        <span className="number-of-selection">
+          {pickNumberOfSelection.replace('<numberOfSelection>', numberOfSelection)}
+        </span>
+        {segment && <span className="selection-tag segment">{segment}</span>}
+      </div>
+    ) : false
+
+
+
   };
 
   const renderResult = () => (
@@ -389,12 +396,12 @@ const Core = function ({
       </h2>
       <h2>
         {
-          textForEachCorrectAnswer.filter( (i, index) => i.answer.filter(ii => ii.toString() === userInput.toString() ) )[0].service1
+          textForEachCorrectAnswer.filter((i, index) => i.answer.filter(ii => ii.toString() === userInput.toString()))[0].service1
         }
       </h2>
       <br />
       {
-        textForEachCorrectAnswer.filter( (i, index) => i.answer.filter(ii => ii.toString() === userInput.toString() ) )[0].content1
+        textForEachCorrectAnswer.filter((i, index) => i.answer.filter(ii => ii.toString() === userInput.toString()))[0].content1
       }
       <br />
       <h2>
@@ -404,12 +411,12 @@ const Core = function ({
       </h2>
       <h2>
         {
-          textForEachCorrectAnswer.filter( (i, index) => i.answer.filter(ii => ii.toString() === userInput.toString() ) )[0].service2
+          textForEachCorrectAnswer.filter((i, index) => i.answer.filter(ii => ii.toString() === userInput.toString()))[0].service2
         }
       </h2>
       <br />
       {
-        textForEachCorrectAnswer.filter( (i, index) => i.answer.filter(ii => ii.toString() === userInput.toString() ) )[0].content2
+        textForEachCorrectAnswer.filter((i, index) => i.answer.filter(ii => ii.toString() === userInput.toString()))[0].content2
       }
       {/* <QuizResultFilter
         filteredValue={filteredValue}
@@ -423,50 +430,50 @@ const Core = function ({
     <div className="questionWrapper">
       {!endQuiz
         && (
-        <div className="questionWrapperBody">
-          <div className="questionModal">
-            <InstantFeedback
-              question={question}
-              showInstantFeedback={showInstantFeedback}
-              correctAnswer={correctAnswer}
-              incorrectAnswer={incorrectAnswer}
-              onQuestionSubmit={onQuestionSubmit}
-              userAnswer={[...userInput].pop()}
-            />
+          <div className="questionWrapperBody">
+            <div className="questionModal">
+              <InstantFeedback
+                question={question}
+                showInstantFeedback={showInstantFeedback}
+                correctAnswer={correctAnswer}
+                incorrectAnswer={incorrectAnswer}
+                onQuestionSubmit={onQuestionSubmit}
+                userAnswer={[...userInput].pop()}
+              />
+            </div>
+            <div>
+              {appLocale.question}
+              {' '}
+              {currentQuestionIndex + 1}
+              :
+            </div>
+            <h3 dangerouslySetInnerHTML={rawMarkup(question && question.question)} />
+            {question && question.questionPic && <img src={question.questionPic} alt="image" />}
+            {question && renderTags(answerSelectionTypeState, question.correctAnswer.length, question.segment)}
+            {question && renderAnswers(question, buttons)}
+            {(showNextQuestionButton || allowNavigation)
+              && (
+                <div className="questionBtnContainer">
+                  {(allowNavigation && currentQuestionIndex > 0) && (
+                    <button
+                      onClick={() => nextQuestion(currentQuestionIndex - 2, true)}
+                      className="prevQuestionBtn btn"
+                      type="button"
+                    >
+                      {appLocale.prevQuestionBtn}
+                    </button>
+                  )}
+                  <button onClick={() => nextQuestion(currentQuestionIndex, false, true)} className={answerIsSelected[currentQuestionIndex] ? "nextQuestionBtn btn" : "nextQuestionBtn btn disable_btn"} type="button">
+                    {(currentQuestionIndex === questions.length - 1) ? "遞交" : appLocale.nextQuestionBtn}
+                  </button>
+                </div>
+              )}
           </div>
-          <div>
-            {appLocale.question}
-            {' '}
-            {currentQuestionIndex + 1}
-            :
-          </div>
-          <h3 dangerouslySetInnerHTML={rawMarkup(question && question.question)} />
-          {question && question.questionPic && <img src={question.questionPic} alt="image" />}
-          {question && renderTags(answerSelectionTypeState, question.correctAnswer.length, question.segment)}
-          {question && renderAnswers(question, buttons)}
-          {(showNextQuestionButton || allowNavigation)
-          && (
-          <div className="questionBtnContainer">
-            {(allowNavigation && currentQuestionIndex > 0) && (
-              <button
-                onClick={() => nextQuestion(currentQuestionIndex - 2, true)}
-                className="prevQuestionBtn btn"
-                type="button"
-              >
-                {appLocale.prevQuestionBtn}
-              </button>
-            )}
-            <button onClick={() => nextQuestion(currentQuestionIndex)} className={ answerIsSelected[currentQuestionIndex] ? "nextQuestionBtn btn" : "nextQuestionBtn btn disable_btn"} type="button">
-              {(currentQuestionIndex === questions.length - 1) ? "遞交" : appLocale.nextQuestionBtn}
-            </button>
-          </div>
-          )}
-        </div>
         )}
       {endQuiz && showDefaultResultState && customResultPage === undefined
-          && renderResult()}
+        && renderResult()}
       {endQuiz && !showDefaultResultState && customResultPage !== undefined
-          && customResultPage(questionSummary)}
+        && customResultPage(questionSummary)}
     </div>
   );
 };

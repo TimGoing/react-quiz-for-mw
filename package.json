@@ -1,6 +1,6 @@
 {
   "name": "react-quiz-component-mw",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "React Quiz Component for mw",
   "main": "lib/Quiz.js",
   "scripts": {
@@ -44,7 +44,6 @@
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"
   },
-
   "dependencies": {
     "@webpack-cli/serve": "^1.6.1",
     "dompurify": "^2.0.8",
