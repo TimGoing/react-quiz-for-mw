@@ -1,6 +1,6 @@
 {
   "name": "react-quiz-component-mw",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "React Quiz Component for mw",
   "main": "lib/Quiz.js",
   "scripts": {

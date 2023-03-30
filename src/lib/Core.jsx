@@ -170,13 +170,14 @@ const Core = function ({
     if (!prev) {
       if (!answerIsSelected[currentQuestionIdx]) return
     }
-
+    console.log(currentQuestionIdx, currentQuestionIndex, userInput)
     if (currentQuestionIdx + 1 === questions.length) {
-      if (userInput.length !== questions.length) {
-        // alert('Quiz is incomplete');
-        return
-      }
-      if (!finish) return
+      // if (userInput.length !== questions.length) { // 1111111111111111111111111111111111111111
+      //   // alert('Quiz is incomplete');
+      //   return
+      // }
+      // if (!finish) return // only click the next button can show the result page 1111111111111111111111111111111111111111111
+
       // else if (allowNavigation) {
       //   const submitQuiz = confirm('You have finished all the questions. Submit Quiz now?');
       //   if (submitQuiz) {
